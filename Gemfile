@@ -50,4 +50,5 @@ group :development, :test do
   gem 'hirb'
   gem 'hirb-unicode'
   gem 'carrierwave'
+  gem 'devise'
 end
