@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+ books = Book.all
+
+ books.each do |book|
+  if book.img.present?
+    puts "-----------------------"
+    next
+    puts "~~~~~~~~~~~~~~~~~~~~~~~"
+  else
+    puts "+++++++++++++++++++++++"
+    book.update(img: File.open("public/images/4693.png"))
+    puts "***********************"
+  end
+end
